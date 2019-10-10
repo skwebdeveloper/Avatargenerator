@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+<section>
+	<h1>Enter your name to get an avatar</h1>
+	<div class="centerDiv">
+		<div class="details">
+			<label>Enter your name</label>
+			<input type="text" id="nameid">
+		</div>
+		<div class="imgdiv">
+			<img src="https://images.unsplash.com/photo-1570716891526-e460fbf7a7e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80" width="200" height="200" class="imgchange">
+		</div>
+		<button>Click Me</button>
+	</div>
+</section>
+
+<script>
+ $(document).ready(function(){
+  $('button').click(function(){
+  	// Whatever used by user store over here
+   const name = $('#nameid').val();
+   $('.imgchange').attr('src',`https://joeschmoe.io/api/v1/${name}`);
+   const b = $('.imgchange');
+   console.log(b);
+
+  });
+ });
+</script>
+</body>
+</html>
